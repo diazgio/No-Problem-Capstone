@@ -1,0 +1,43 @@
+<section class='home-menu bg-secondary m-0'>
+  <div class='user-profile'>
+    <div class='user-photo'>
+    </div>
+    <div class='user-name'>
+      <h1>Hola</h1>
+    </div>
+  </div>
+  <div class='followings d-flex justify-content-around'>
+    <div class='followers text-center'>
+      <h3>Followers</h3>
+      <p> 134</p>
+    </div>
+    <div class='followeds text-center'>
+      <h3>Followeds</h3>
+      <p> 100</p>
+    </div>
+  </div>
+  <div class='home-page'>
+    <%= link_to root_path, class: 'd-flex justify-content-center align-items-center' do%>
+      <span><i class="fas fa-home"></i></span> 
+      <h3 class='m-0'> HOME</h3>
+    <% end%>
+  </div>
+  <div class='home-page text-center'>
+    <%= link_to root_path, class: 'd-flex justify-content-center align-items-center' do%>
+      <span><i class="fas fa-at"></i></span>
+      <h3 class='m-0'> CONECT</h3>
+    <% end%>
+  </div>
+  <div class='home-page text-center'>
+    <%= link_to root_path, class: 'd-flex justify-content-center align-items-center' do%>
+      <span><i class="fab fa-slack-hash"></i></span>
+      <h3 class='m-0'> DISCOVER</h3>
+    <% end%>
+  </div>
+  <div class='home-page text-center'>
+    <%= link_to root_path, class: 'd-flex justify-content-center align-items-center' do%>
+      <span><i class="fas fa-user-alt"></i></span>
+      <h3 class='m-0'> PROFILE</h3>
+    <% end%>
+  </div>
+</section>

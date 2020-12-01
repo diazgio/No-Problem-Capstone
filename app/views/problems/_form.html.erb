@@ -1,27 +1,9 @@
-<%= form_with(model: problem, local: true) do |form| %>
-  <% if problem.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(problem.errors.count, "error") %> prohibited this problem from being saved:</h2>
-
-      <ul>
-        <% problem.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
+<div class="p-2">
+  <%= simple_form_for(@problem) do |f| %>
+    <%= f.error_notification %>
+    <div class="form-group">
+      <%= f.input :content, label: 'Post about it', input_html: { class: 'form-control' }, wrapper: false, label_html: { class: 'label' }, placeholder: 'Compose a new Post...', autofocus: true%>
     </div>
+    <%= f.button :submit, class: 'btn btn-dark'%>
   <% end %>
-
-  <div class="field">
-    <%= form.label :content %>
-    <%= form.text_area :content %>
-  </div>
-
-  <div class="field">
-    <%= form.label :user_id %>
-    <%= form.number_field :user_id %>
-  </div>
-
-  <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+</div>
