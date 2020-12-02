@@ -35,7 +35,7 @@
     <% end%>
   </div>
   <div class='home-page text-center'>
-    <%= link_to root_path, class: 'd-flex justify-content-center align-items-center' do%>
+    <%= link_to user_path(current_user.id), class: 'd-flex justify-content-center align-items-center' do%>
       <span><i class="fas fa-user-alt"></i></span>
       <h3 class='m-0'> PROFILE</h3>
     <% end%>

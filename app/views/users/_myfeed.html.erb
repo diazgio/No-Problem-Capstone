@@ -1,8 +1,5 @@
-<div class="d-flex justify-content-center border mt-2 mb-4 mx-0 rounded row align-middle shadow" style='height: 20rem'>
-  <%= render 'form' %>
-</div>
-<% @problems.each do |problem| %>
-  <div class="row border py-2 my-2">
+<% @user.problems.order("created_at DESC").each do |problem| %>
+  <div class="row border py-2 m-0">
     <% if user_signed_in? %>
       <div class="col-4 userimg d-flex justify-content-center">
         <%= image_tag("among.jpg", class: "rounded-circle my-2", width: "80", height: "80") %>

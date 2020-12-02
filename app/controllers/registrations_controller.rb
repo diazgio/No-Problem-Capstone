@@ -9,7 +9,4 @@ class RegistrationsController < Devise::RegistrationsController
     params.require(:user).permit(:name, :username, :email, :password, :password_confirmation, :current_password)
   end
   
-  def after_sign_in(_resource)
-    problems_path
-  end
 end

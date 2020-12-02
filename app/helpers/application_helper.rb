@@ -9,17 +9,11 @@ module ApplicationHelper
 
   def signed_in?
     if user_signed_in?
-      ("#{link_to current_user.username, edit_user_registration_path, class: 'btn text-light m-2'}" <<
+      ("#{link_to 'Edit', edit_user_registration_path, class: 'btn text-light m-2'}" <<
        "#{link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn text-light m-2'}").html_safe
     else
       ("#{link_to 'Sing In', new_user_session_path, class: 'btn text-light m-2'}" <<
        "#{link_to 'Sing Up', new_user_registration_path, class: 'btn text-light m-2'}").html_safe
-    end
-  end
-
-  def are_you_new?
-    if user_signed_in?
-      (render 'left-side').html_safe
     end
   end
 

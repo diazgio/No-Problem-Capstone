@@ -1,9 +1,10 @@
-<div class="p-2">
-  <%= simple_form_for(@problem) do |f| %>
-    <%= f.error_notification %>
-    <div class="form-group">
-      <%= f.input :content, label: 'Post about it', input_html: { class: 'form-control' }, wrapper: false, label_html: { class: 'label' }, placeholder: 'Compose a new Post...', autofocus: true%>
+<%= form_with(model: @problem, local: true) do |form| %>
+  <div class="p-3 mr-3 trix" style='height: 17rem'>
+    <div class="text-area" style='height: 15rem'>
+      <%= form.rich_text_area :body, label: "What's Your Problem", input_html: { class: "text-area" }, wrapper: false, label_html: {class: "label"}, placeholders: "Your Problem...", autofocus: true %>
     </div>
-    <%= f.button :submit, class: 'btn btn-dark'%>
-  <% end %>
-</div>
+
+    <%= hidden_field_tag(:redirect_url, problems_path) %>
+    <%= form.button :submit, class: "btn btn-secondary mt-2" %>
+  </div>
+<% end %>
