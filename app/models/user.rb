@@ -10,4 +10,8 @@ class User < ApplicationRecord
   has_many :followds, through: :followeds, source: :follower
   has_many :likes, dependent: :destroy
   has_many :comments, dependent: :destroy
+
+  def unfollow(user)
+    follows.destroy(user)
+  end
 end
