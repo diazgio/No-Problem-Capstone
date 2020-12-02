@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   resources :users do
     resources :followings, only: %i[destroy]
   end
-  
+  get 'following/:id', to: 'followings#create', as: 'follow'
   resources :problems do
     resources :comments, only: %i[create]
     resources :likes, only: %i[create destroy]
