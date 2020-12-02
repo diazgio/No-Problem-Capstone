@@ -1,9 +1,17 @@
-<section class='container-fluid'>
+<section class='container-fluid p-0 m-0'>
   <div class='row'>
-    <div class="col-8">
-      <%= render 'feed' %>
+    <div class='col-2 left-side bg-secondary p-0 m-0'>
+      <%= are_you_new? %>
     </div>
-    <div class="col-4">
+    <div class='col-10 p-0 m-0'>
+      <%= render 'problems/navbar' %>
+      <div class='row'>
+        <div class="col-8">
+          <%= render 'feed' %>
+        </div>
+        <div class="col-4">
+        </div>
+      </div>
     </div>
   </div>
 </section>

@@ -19,7 +19,16 @@ module ApplicationHelper
 
   def are_you_new?
     if user_signed_in?
-      (render 'profile').html_safe
+      (render 'left-side').html_safe
+    end
+  end
+
+  def like_or_dislike_btn(problem)
+    like = Like.find_by(problem: problem, user: current_user)
+    if like
+      link_to('Dislike!', problem_like_path(id: like.id, problem_id: problem.id), method: :delete)
+    else
+      link_to('Like!', problem_likes_path(problem_id: problem.id), method: :post)
     end
   end
 end

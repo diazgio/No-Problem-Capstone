@@ -5,8 +5,10 @@
 @import '@fortawesome/fontawesome-free/scss/brands';
 @import '@fortawesome/fontawesome-free/scss/v4-shims';
 
-html {
+html,
+body {
   font-size: 62.5%; /* 10px -> 1rem */
+  margin: 0;
 }
 
 .home-menu {
