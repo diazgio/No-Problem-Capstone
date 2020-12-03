@@ -10,6 +10,16 @@ body {
   font-size: 62.5%; /* 10px -> 1rem */
   margin: 0;
 }
+.bg-yellow {
+  background-color: #faeb14ef;
+}
+.bg-grey {
+  background-color: rgba(187, 181, 181, 0.925);
+}
+
+.logo-navbar {
+  font-size: 2rem;
+}
 
 .home-menu {
   height: 100vh;
@@ -21,4 +31,43 @@ body {
 
 .text-area {
   height: 12rem;
+}
+
+.register {
+  margin-top: 20rem;
+  .image-login2 {
+    height: 10rem;
+  }
+  .image-login {
+    height: 50rem;
+    border-radius: 20%;
+  }
+  .image-login3 {
+    height: 10rem;
+  }
+  .login-form {
+    height: 40rem;
+    border: 1px solid black;
+    border-radius: 2rem;
+    .formate {
+      height: 30rem;
+      margin-top: 4rem;
+      width: 40rem;
+      h2 {
+        font-size: 3rem;
+        font-weight: 900;
+      }
+      .email {
+        font-size: 1.7rem;
+        width: 30rem;
+      }
+      .pass {
+        font-size: 1.7rem;
+        width: 30rem;
+      }
+      .rememberme{
+        font-size: 1.7rem;
+      }
+    }
+  }
 }

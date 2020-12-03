@@ -11,6 +11,8 @@ class User < ApplicationRecord
   has_many :likes, dependent: :destroy
   has_many :comments, dependent: :destroy
   has_rich_text :body
+  has_one_attached :cover_image
+  has_one_attached :avatar
 
   def unfollow(user)
     follows.destroy(user)

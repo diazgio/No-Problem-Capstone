@@ -14,6 +14,12 @@
                 autofocus: true,
                 input_html: { autocomplete: "username" } %>
 
+    <%= f.label :cover_image %>
+    <%= f.file_field :cover_image %>
+
+    <%= f.label :avatar %>
+    <%= f.file_field :avatar %>
+
     <%= f.input :email,
                 required: true,
                 autofocus: true,
