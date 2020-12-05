@@ -11,7 +11,7 @@ module UsersHelper
 
   def user_avatar(user)
     if user.avatar.attached?
-      image_tag user.avatar.variant(resize: '90x90!')
+      image_tag user.avatar.variant(resize: '90x90!'), class: 'rounded-circle'
     else
       image_tag('avatar.png', class: 'rounded-circle', height: 90, width: 90)
     end
