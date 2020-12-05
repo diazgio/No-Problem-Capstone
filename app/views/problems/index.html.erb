@@ -11,6 +11,34 @@
           <%= render 'feed' %>
         </div>
         <div class="col-4">
+          <div>
+            <h3>WHO TO FOLLOW?</h3>
+            <hr>
+            <div>
+              <% User.order("created_at DESC").first(3).each do |p| %>
+                <div class="col-12 ">
+                  <%= user_avatar(p) %>
+                  <%=link_to p.name, user_path(id: p.id) %>
+                  <hr>
+                </div>
+              <% end %>
+            </div>
+            <div class="text-muted pt-2 ">
+              <h4 class="text-center">Trending</h4>
+              <hr>
+              <div class="container text-center">
+                <h6>#RubyonRails</h6>
+                <hr>
+                <h6>#React</h6>
+                <hr>
+                <h6>#Hacks</h6>
+                <hr>
+                <h6>#Plumbing</h6>
+                <hr>
+                <h6>#Laws</h6>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

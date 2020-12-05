@@ -35,6 +35,7 @@
         <div class="col-12">
           <%= user_avatar(person) %>
           <%= link_to person.name, user_path(person.id)  %>
+          <%= follow_unfollow(@user)%>
         </div>
         <hr>
       <% end %>
