@@ -1,0 +1,19 @@
+<section class='container-fluid p-0 m-0'>
+  <div class='row m-0'>
+    <div class='col-2 left-side bg-secondary p-0 m-0'>
+      <%= render 'problems/left-side' %>
+    </div>
+    <div class='col-10 p-0 m-0'>
+      <%= flash_message %>
+      <%= render 'problems/navbar' %>
+      <% User.order("created_at DESC").all.each do |p| %>
+        <div class="col-12 ">
+          <%= user_avatar(p) %>
+          <%=link_to p.name, user_path(id: p.id) %>
+          <hr>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</section>
+

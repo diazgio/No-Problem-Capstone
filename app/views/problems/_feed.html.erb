@@ -3,21 +3,17 @@
 </div>
 <% @problems.each do |problem| %>
   <div class="row border py-2 my-2">
-    <% if user_signed_in? %>
-      <div class="col-4 userimg d-flex justify-content-center">
-        <%= image_tag("among.jpg", class: "rounded-circle my-2", width: "80", height: "80") %>
-      </div>
-    <% else %>
-      <div class="col-4 userimg d-flex justify-content-center">
-        <%= image_tag("among.jpg", class: "rounded-circle my-2", width: "80", height: "80") %>
-      </div>
-    <% end %>
+    
+    <div class="col-4 userimg d-flex justify-content-center">
+      <%= user_avatar(problem.user) %>
+    </div>
+
     <div class="col-8">
       <% if user_signed_in? %>
         <strong><%= problem.user.name %></strong><br/>
         <small><%= problem.user.username %></small><br/>
       <% end %>
-
+      <p><%= problem.category.category%></p>
       <p><%= problem.body %></p>
       
       <%= like_or_dislike_btn(problem) %>
