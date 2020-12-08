@@ -1,44 +1,44 @@
-<section class='home-menu bg-secondary m-0'>
-  <div class='user-profile d-flex'>
+<section class='home-menu bg-left m-0'>
+  <div class='user-profile d-flex justify-content-center'>
     <div class='user-photo'>
       <%= current_avatar %>
     </div>
-    <div class='user-name'>
-      <h1><%= current_user.name %></h1>
+    <div class='user-name d-flex justify-content-center align-items-center'>
+      <h1 class='text-light'><%= current_user.name %></h1>
     </div>
   </div>
   <div class='followings d-flex justify-content-around'>
     <div class='followers text-center'>
-      <h3>Followers</h3>
-      <h3><%= current_user.followers.count.to_s %></h3>
+      <h3 class='text-light'>Followers</h3>
+      <h3 class='text-light'><%= current_user.followers.count.to_s %></h3>
     </div>
     <div class='followeds text-center'>
-      <h3>Followed</h3>
-      <h3><%= current_user.followeds.count.to_s %></h3>
+      <h3 class='text-light'>Followed</h3>
+      <h3 class='text-light'><%= current_user.followeds.count.to_s %></h3>
     </div>
   </div>
   <div class='home-page'>
-    <%= link_to root_path, class: 'd-flex justify-content-center align-items-center' do%>
-      <span><i class="fas fa-home"></i></span> 
-      <h3 class='m-0'> HOME</h3>
+    <%= link_to root_path, class: 'd-flex justify-content-start align-items-center h-items' do%>
+      <span><i class="fas fa-home text-light"></i></span> 
+      <h3 class='m-0 text-light'> HOME</h3>
     <% end%>
   </div>
   <div class='home-page text-center'>
-    <%= link_to users_path, class: 'd-flex justify-content-center align-items-center' do%>
-      <span><i class="fas fa-at"></i></span>
-      <h3 class='m-0'> CONECT</h3>
+    <%= link_to users_path, class: 'd-flex justify-content-start align-items-center h-items' do%>
+      <span><i class="fas fa-at text-light"></i></span>
+      <h3 class='m-0 text-light'> CONECT</h3>
     <% end%>
   </div>
   <div class='home-page text-center'>
-    <%= link_to categories_path, class: 'd-flex justify-content-center align-items-center' do%>
-      <span><i class="fab fa-slack-hash"></i></span>
-      <h3 class='m-0'> CATEGORIES</h3>
+    <%= link_to categories_path, class: 'd-flex justify-content-start align-items-center h-items' do%>
+      <span><i class="fab fa-slack-hash text-light"></i></span>
+      <h3 class='m-0 text-light'> CATEGORIES</h3>
     <% end%>
   </div>
   <div class='home-page text-center'>
-    <%= link_to user_path(current_user.id), class: 'd-flex justify-content-center align-items-center' do%>
-      <span><i class="fas fa-user-alt"></i></span>
-      <h3 class='m-0'> PROFILE</h3>
+    <%= link_to user_path(current_user.id), class: 'd-flex justify-content-start align-items-center h-items' do%>
+      <span><i class="fas fa-user-alt text-light"></i></span>
+      <h3 class='m-0 text-light'> PROFILE</h3>
     <% end%>
   </div>
 </section>

@@ -21,9 +21,13 @@ module ApplicationHelper
   def like_or_dislike_btn(problem)
     like = Like.find_by(problem: problem, user: current_user)
     if like
-      link_to('Dislike!', problem_like_path(id: like.id, problem_id: problem.id), method: :delete)
+      link_to problem_like_path(id: like.id, problem_id: problem.id), method: :delete, class:'like-button' do
+        fa_icon 'thumbs-down'
+      end
     else
-      link_to('Like!', problem_likes_path(problem_id: problem.id), method: :post)
+      link_to problem_likes_path(problem_id: problem.id), method: :post, class:'like-button' do
+        fa_icon 'thumbs-up'
+      end
     end
   end
 end

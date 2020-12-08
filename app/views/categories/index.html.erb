@@ -7,6 +7,8 @@
       <%= flash_message %>
       <%= render 'problems/navbar' %>
       <h1>Categories</h1>
+      <h4><%= link_to 'New Category', new_category_path %></h4>
+      
 
       <% @categories.each do |category| %>
         <tr>
@@ -60,7 +62,7 @@
 
       <br>
 
-      <%= link_to 'New Category', new_category_path %>
+      
     </div>
   </div>
 </section>

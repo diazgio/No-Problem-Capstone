@@ -10,11 +10,11 @@ body {
   font-size: 62.5%; /* 10px -> 1rem */
   margin: 0;
 }
-.bg-yellow {
-  background-color: #faeb14ef;
+.bg-left {
+  background-color: #1c3e4a;
 }
-.bg-grey {
-  background-color: rgba(187, 181, 181, 0.925);
+.bg-navbar {
+  background-color: #529ff7;
 }
 
 .logo-navbar {
@@ -23,6 +23,37 @@ body {
 
 .home-menu {
   height: 100vh;
+  .user-profile {
+    .user-photo {
+      margin: 1rem 1rem;
+    }
+  }
+  .followings {
+    border-bottom: white solid 2px;
+    border-top:  white solid 2px;
+    padding: 1rem 0;
+  }
+  .home-page {
+    border-bottom: white solid 1px;
+    
+    padding: 1rem 0;
+    .h-items {
+      margin-left: 9rem;
+      span {
+        font-size: 1.5rem;
+        margin-right: 5px;
+      }
+      h3 {
+        font-weight: 900;
+      }
+    }
+    .h-items:hover {
+      text-decoration: none;
+    }
+  }
+  .home-page:hover {
+    background-color: #529ff7;
+  }
 }
 
 .left-side {
@@ -68,6 +99,132 @@ body {
       .rememberme{
         font-size: 1.7rem;
       }
+    }
+  }
+}
+
+#trix-toolbar-1 {
+  font-size: 1.2rem;
+  .trix-button-row {
+    .trix-button-group:nth-child(2) {
+      display: none;
+      background-color: white;
+    }
+  }
+}
+
+.form-p {
+  width: 100%;
+  .trix {
+    select {
+      margin-bottom: 1rem;
+      font-size: 1.2rem;
+    }
+    trix-editor {
+      height: 10rem;
+    }
+  }
+}
+.avatar {
+  height: 13rem;
+  width: 13rem;
+}
+
+.problems {
+  height: 27rem;
+  .problems-content {
+    strong {
+      font-size: 2.5rem;
+      color: #1c3e4a;
+    }
+    small {
+      font-size: 1.9rem;
+      color: #b5b9b5;
+    }
+    .like {
+      font-size: 2.5rem;
+      .like-button {
+        color:#529ff7;
+      }
+    }
+    h5 {
+      text-align: end;
+      font-size: 2.2rem;
+    }
+    .trix-content {
+      font-size: 2rem;
+      border: 1px solid gray;
+      margin-bottom: 1rem;
+    }
+    .comment {
+      font-size: 1.5rem;
+      background-color: #529ff7;
+      color: white;
+    }
+    .icon-comment {
+      font-size: 1.5rem;
+      margin-top: 1.3rem;
+    }
+  }
+}
+.comment {
+  font-size: 1.5rem;
+  background-color: #529ff7;
+  color: white;
+}
+
+.back {
+  background-color: #1c3e4a;
+  color: white;
+  font-size: 2rem;
+}
+.edit {
+  .title-edit {
+    color: #529ff7;
+    font-weight: 900;
+    font-size: 3rem;
+  }
+  label {
+    font-size: 1.8rem;
+  }
+  input {
+    font-size: 1.5rem;
+  }
+  small {
+    font-size: 1.4rem;
+  }
+  .update {
+    background-color: #529ff7;
+    color: white;
+    font-weight: bolder;
+    font-size: 2rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: 1.8rem;
+  }
+}
+
+.whotofollow {
+  .w-title {
+    border-bottom: rgba(190, 186, 186, 0.863) solid 1px;
+    text-align: center;
+    padding: 1rem 0;
+    h3 {
+      font-size: 2.5rem;
+    }
+  }
+  .users-to-f {
+    padding-top: 1rem;
+    a {
+      color: #1c3e4a;
+      font-size: 2rem;
+      margin-left: 1.5rem;
+    }
+    a:hover {
+      text-decoration: none;
     }
   }
 }

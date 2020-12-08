@@ -11,17 +11,17 @@ module UsersHelper
 
   def user_avatar(user)
     if user.avatar.attached?
-      image_tag user.avatar.variant(resize: '90x90!'), class: 'rounded-circle'
+      image_tag user.avatar.variant(resize: '90x90!'), class: 'rounded-circle avatar'
     else
-      image_tag('avatar.png', class: 'rounded-circle', height: 90, width: 90)
+      image_tag('avatar.png', class: 'rounded-circle', height: 130, width: 130)
     end
   end
 
   def user_cover
     if @user.cover_image.attached?
-      image_tag @user.cover_image, class: 'col-12 p-0', style: 'height: 15em'
+      image_tag @user.cover_image, class: 'col-12 p-0', style: 'height: 30rem'
     else
-      image_tag('cover.jpg', class: 'col-12 p-0', style: 'height: 15em')
+      image_tag('cover.jpg', class: 'col-12 p-0', style: 'height: 30rem')
     end
   end
 
@@ -46,6 +46,21 @@ module UsersHelper
       image_tag current_user.avatar.variant(resize: '90x90!'), class: 'rounded-circle'
     else
       image_tag('avatar.png', class: 'rounded-circle', height: 90, width: 90)
+    end
+  end
+
+  def comment_settings(problem)
+    if user_signed_in? && current_user.id == problem.user_id
+      content_tag :div, class: 'd-flex justify-content-between'
+        ("#{link_to problem, class: 'text-dark mx-2 icon-comment' do
+          fa_icon 'link'
+        end}" <<
+        "#{link_to edit_problem_path(id: problem.id), class: 'text-dark mx-2 icon-comment' do 
+          fa_icon 'edit'
+        end}" <<
+        "#{link_to edit_problem_path(id: problem.id), class: 'text-dark mx-2 icon-comment' do 
+          fa_icon 'trash-alt'
+          end}").html_safe
     end
   end
 

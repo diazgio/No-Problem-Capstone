@@ -1,3 +1,14 @@
+<section class='container-fluid p-0 m-0'>
+  <div class='row m-0'>
+    <div class='col-2 left-side p-0 m-0'>
+      <%= render 'left-side' %>
+    </div>
+    <div class='col-10 p-0 m-0'>
+      <%= flash_message %>
+      <%= render 'problems/navbar' %>
+    </div>
+  </div>
+</section>
 <h1>Editing Problem</h1>
 
 <%= render 'form', problem: @problem %>
