@@ -17,6 +17,45 @@ body {
   font-size: 1.7rem;
   font-weight: bolder;
 }
+.sign-up {
+  h2 {
+    font-size: 3rem;
+    font-weight: bolder;
+    color:  #1c3e4a;
+    text-align: center;
+    border-bottom: 1px solid  #1c3e4a;
+    width: fit-content;
+    margin: 1rem auto;
+    padding-bottom: 1rem;
+  }
+  label {
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+  #user_cover_image,
+  #user_avatar {
+    font-size: 1rem;
+    margin: 0 1rem;
+  }
+  small {
+    font-size: 1.2rem;
+  }
+  .form-actions {
+    text-align: center;
+    margin: 1rem 0;
+    input {
+      font-size: 1.6rem;
+      font-weight: bolder;
+    }
+  }
+  .links-log {
+    text-align: center;
+    margin-top: 1rem;
+    a {
+      font-size: 1.6rem;
+    }
+  }
+}
 .bg-left {
   background-color: #1c3e4a;
 }
