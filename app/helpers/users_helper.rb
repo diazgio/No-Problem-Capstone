@@ -1,9 +1,9 @@
 module UsersHelper
   def follow_unfollow(user)
-    cntnt = link_to 'Unfollow', following_path, method: :delete, class: 'textdec-none form-btn unfollow-btn align-self-center'
+    cntnt = link_to 'Unfollow', following_path, method: :delete, class: 'btn bg-navbar text-light'
     return cntnt if current_user.follows.include?(user)
 
-    cntnt = link_to 'Follow', follow_path(user), class: 'textdec-none form-btn unfollow-btn align-self-center'
+    cntnt = link_to 'Follow', follow_path(user), class: 'btn bg-navbar text-light'
     return cntnt unless current_user.follows.include?(user) || current_user == user
 
     nil

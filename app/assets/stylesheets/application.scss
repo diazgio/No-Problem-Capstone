@@ -10,6 +10,13 @@ body {
   font-size: 62.5%; /* 10px -> 1rem */
   margin: 0;
 }
+.flash {
+  font-size: 1.7rem;
+}
+.logs {
+  font-size: 1.7rem;
+  font-weight: bolder;
+}
 .bg-left {
   background-color: #1c3e4a;
 }
@@ -65,16 +72,22 @@ body {
 }
 
 .register {
-  margin-top: 20rem;
-  .image-login2 {
-    height: 10rem;
+  margin-top: 17rem;
+  .title-log {
+    h2,h5 {
+      color: #1c3e4a;
+      font-weight: bolder;
+    }
+    h2 {
+      font-size: 3rem;
+    }
+    h5 {
+      font-size: 2rem;
+    }
   }
   .image-login {
     height: 50rem;
     border-radius: 20%;
-  }
-  .image-login3 {
-    height: 10rem;
   }
   .login-form {
     height: 40rem;
@@ -82,7 +95,7 @@ body {
     border-radius: 2rem;
     .formate {
       height: 30rem;
-      margin-top: 4rem;
+      margin-top: 2rem;
       width: 40rem;
       h2 {
         font-size: 3rem;
@@ -98,17 +111,37 @@ body {
       }
       .rememberme{
         font-size: 1.7rem;
+        .form-check {
+          display: flex;
+          input {
+            margin-left: 5rem;
+            margin-top: 0.6rem;
+          }
+          label {
+            margin-left: 7rem;
+          }
+        }
+      }
+      .button {
+        margin-bottom: 1rem;
+        .login-button {
+          font-size: 1.7rem;
+        }
+      }
+      a {
+        font-size: 1.5rem;
       }
     }
   }
 }
-
-#trix-toolbar-1 {
-  font-size: 1.2rem;
-  .trix-button-row {
-    .trix-button-group:nth-child(2) {
-      display: none;
-      background-color: white;
+.problems-form {
+  #trix-toolbar-1 {
+    font-size: 1.2rem;
+    .trix-button-row {
+      .trix-button-group:nth-child(2) {
+        display: none;
+        background-color: white;
+      }
     }
   }
 }
@@ -150,10 +183,11 @@ body {
     h5 {
       text-align: end;
       font-size: 2.2rem;
+      color: #529ff7;
+      font-weight: bolder;
     }
     .trix-content {
       font-size: 2rem;
-      border: 1px solid gray;
       margin-bottom: 1rem;
     }
     .comment {
@@ -226,5 +260,164 @@ body {
     a:hover {
       text-decoration: none;
     }
+  }
+}
+
+.title-c {
+  width: fit-content;
+  padding: 1rem;
+  h1 {
+    color: #1c3e4a;
+    font-weight: bolder;
+  }
+}
+
+.new-c {
+  font-size: 1.7rem;
+  font-weight: bolder;
+}
+
+.categories {
+  .each-c {
+    font-size: 1.6rem;
+    font-weight: bolder;
+  }
+}
+
+.problems-c {
+  height: 25rem;
+  width: 62rem;
+  .problems-c-content {
+    strong {
+      font-size: 1.5rem;
+    }
+    small {
+      font-size: 1.4rem;
+      color: #b5b9b5;
+    }
+
+    .like-c {
+      font-size: 2rem;
+    }
+    h5 {
+      color: #529ff7;
+      font-size: 1.3rem;
+      font-weight: bolder;
+    }
+    .trix-content {
+      font-size: 1.9rem;
+      margin: 1rem;
+    }
+    .form-control {
+      margin-bottom: 1rem;
+    }
+    .icon-comment {
+      font-size: 1.5rem;
+      color:  #1c3e4a;
+    }
+  }
+}
+.new-cate {
+  h1 {
+    font-size: 3.5rem;
+    font-weight: bolder;
+    color:  #1c3e4a;
+    border-bottom: 1px solid #1c3e4a;
+    width: fit-content;
+    margin: 2rem auto;
+  }
+  label {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #529ff7;
+  }
+  .create {
+    font-size: 1.7rem;
+    font-weight: bolder;
+  }
+  a {
+    font-size: 1.5rem;
+  }
+}
+
+.user-navbar {
+  font-size: 1.8rem;
+  font-weight: bolder;
+  li {
+    a {
+      color: #1c3e4a;
+    }
+  }
+}
+
+.user-form {
+  #trix-toolbar-1 {
+    font-size: 1.5rem;
+    .trix-button-row {
+      .trix-button-group:nth-child(2) {
+        display: none;
+        background-color: white;
+      }
+    }
+  }
+
+  .trix {
+    trix-editor {
+      height: 10rem;
+    }
+    button {
+      font-size: 1.5rem;
+    }
+  }
+}
+.user-data {
+  .u-title {
+    font-size: 1.7rem;
+    font-weight: bolder;
+    color: #1c3e4a;
+  }
+  small {
+    font-size: 1.5rem;
+  }
+  .follow-button {
+    font-size: 2rem;
+  }
+  .user-follows {
+    h3, h4 {
+      color: #529ff7;
+      font-weight: bolder;
+    }  
+  }
+  .media-2 {
+    h3 {
+      color: #1c3e4a;
+      font-weight: bolder;
+    }
+  }
+
+  .users-followeds {
+    a {
+      color: #1c3e4a;
+      font-size: 1.7rem;
+      margin: 0 2rem;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.all-users {
+  img {
+    margin-left: 4rem;
+    margin-right: 3rem;
+  }
+  a {
+    color: #1c3e4a;
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+  a:hover {
+    text-decoration: none;
   }
 }

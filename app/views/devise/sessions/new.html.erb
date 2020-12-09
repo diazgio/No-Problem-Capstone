@@ -9,7 +9,7 @@
       <div class='d-flex align-items-center register'>
         <div class='col-6 mt-0 text-center'>
           <div class='mb-5 title-log'>
-            <h2>NO PROBLEM SITE</h2>
+            <h2>NO PROBLEM WEBSITE</h2>
             <h5>"The best way to solved any problem, just pust your problem and let your friends to help you with that!"</h5>
           </div>
           <%= image_tag 'login.jpg', class: 'image-login col-12'%>
@@ -32,12 +32,12 @@
                             input_html: { autocomplete: "current-password" } %>
               </div>
 
-              <div class='text-center rememberme'>
+              <div class='d-flex rememberme'>
                 <%= f.input :remember_me, as: :boolean, class: 'ml-3' if devise_mapping.rememberable? %>
               </div>
 
-              <div class="text-center">
-                <%= f.button :submit, "Log in", class:'btn btn-warning' %>
+              <div class="text-center button">
+                <%= f.button :submit, "Log in", class:'btn bg-navbar text-light login-button' %>
               </div>
             <% end %>
 

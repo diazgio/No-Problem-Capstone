@@ -1,40 +1,32 @@
 <% @user.problems.order("created_at DESC").each do |problem| %>
-  <div class="row border py-2 m-0">
-    <div class="col-4 userimg d-flex justify-content-center">
+  <div class="container border py-4 my-2 mx-auto d-flex col-8 problems">
+    
+    <div class="col-4 userimg d-flex justify-content-center align-items-center">
       <%= user_avatar(problem.user) %>
     </div>
-    <div class="col-8">
-      <% if user_signed_in? %>
-        <strong><%= problem.user.name %></strong><br/>
-        <small><%= problem.user.username %></small><br/>
-      <% end %>
-      <p><%= problem.category.category%></p>
-      <p><%= problem.body %></p>
-      
-      <%= like_or_dislike_btn(problem) %>
+
+    <div class="col-8 problems-content">
+      <div class='d-flex justify-content-between align-items-center'>
+        <div>
+          <strong><%= problem.user.name %></strong><br/>
+          <small>@<%= problem.user.username %></small><br/>
+        </div>
+        <div class='like'>
+          <%= like_or_dislike_btn(problem) %>
+        </div>
+      </div>
+      <h5><%= problem.category.category%></h5>
+      <%= problem.body %>
 
       <%= render partial: 'comments/comment', collection: problem.comments %>
-      
       <%= form_for(problem.comments.new, url: problem_comments_path(problem)) do |form| %>
         <%= form.text_field :content, id: :comment_content, class: 'form-control', placeholder: 'Add new Comment' %>
-        <%= form.submit 'Comment', class: 'btn btn-secondary' %>
+        <%= form.submit 'Comment', class: 'btn mt-2 comment' %>
       <% end %>
+      <div class='d-flex justify-content-end'>
+        <%= comment_settings(problem) %>
+      </div>
 
-      <% if user_signed_in? && current_user.id == problem.user_id %>
-        <div class="d-flex align-items-center">
-          <%= link_to @problem do%>
-            <span class='icon mx-2 text-dark'><i class="fa fa-link" aria-hidden='true'></i></span>
-          <% end %>
-
-          <%= link_to edit_problem_path(id: problem.id) do %>
-            <span class='icon mx-2 text-dark'><i class="fas fa-edit"></i></span>
-          <% end %>
-          
-          <%= link_to problem_path(id: problem.id), method: :delete, data: { confirm: 'Are you sure?' } do %>
-            <span><i class="fas fa-trash-alt mx-2 text-dark my-0"></i></span>
-          <% end %>
-        </div>
-      <% end %>
     </div>
   </div>
 <% end %>

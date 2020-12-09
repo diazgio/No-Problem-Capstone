@@ -1,45 +1,50 @@
-<div class='container'>
+<div class='container shadow-lg p-3 mb-5 bg-white rounded'>
   <div class="col-12 align-content-center pt-4">
     <div style="text-align: center">
       <%= user_avatar(@user) %>
     </div>
   </div>
 
-  <div class=" justify-content-center " style=" text-align: center">
-    <h5 class="card-title"><%= @user.name %></h5>
+  <div class=" justify-content-center user-data" style=" text-align: center">
+    
+    <h5 class="card-title u-title mt-3"><%= @user.name %></h5>
     <p class="card-text"><small class="text-muted"><%= "@#{@user.username}" %></small></p>
-    <%= follow_unfollow(@user)%>
-    <div class='d-flex row justify-content-center'>
-      <div>
+    <p class='follow-button'><%= follow_unfollow(@user)%></p>
+
+    <div class='d-flex row justify-content-center user-follows mb-5'>
+      
+      <div class='mr-5'>
         <h3><%= @user.problems.count.to_s%></h3>
         <h4>Problems</h4>
       </div>
+
       <div>
         <h3><%= @user.followers.count.to_s %></h3>
         <h4>Followers</h4>
       </div>
-      <div>
+
+      <div class='ml-5'>
         <h3><%= @user.followeds.count.to_s %></h3>
         <h4>Followed</h4>
       </div>
+      
     </div>
-    <div>
-      <div class="media-body">
-        <div class="row justify-content-center ">
-          <h6>Following To</h6>
-        </div>
-        <hr/>
+
+    
+    <div class="media-body">
+      <div class="row justify-content-center media-2">
+        <h3>Following To</h3>
       </div>
-      <div>
-      <% @user.follows.each do |person| %>
-        <div class="col-12">
-          <%= user_avatar(person) %>
-          <%= link_to person.name, user_path(person.id)  %>
-          <%= follow_unfollow(@user)%>
-        </div>
-        <hr>
-      <% end %>
+      <hr/>
     </div>
-    </div>
+    
+    <% @user.follows.each do |person| %>
+      <div class="col-12 users-followeds">
+        <%= user_avatar(person) %>
+        <%= link_to person.name, user_path(person.id)  %>
+      </div>
+      <hr>
+    <% end %>
+    
   </div>
 </div>

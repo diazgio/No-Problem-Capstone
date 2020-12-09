@@ -19,3 +19,9 @@ import "@fortawesome/fontawesome-free/js/all";
 
 require("trix")
 require("@rails/actiontext")
+global.$ = jQuery
+$(document).on('turbolinks:load', function(){
+  $(".flash").delay(3000).slideUp(500, function(){
+      $(".flash").alert('close');
+  });
+});
