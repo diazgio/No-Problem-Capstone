@@ -52,10 +52,7 @@ module UsersHelper
   def comment_settings(problem)
     if user_signed_in? && current_user.id == problem.user_id
       content_tag :div, class: 'd-flex justify-content-between'
-        ("#{link_to problem, class: 'text-dark mx-2 icon-comment' do
-          fa_icon 'link'
-        end}" <<
-        "#{link_to edit_problem_path(id: problem.id), class: 'text-dark mx-2 icon-comment' do 
+        ("#{link_to edit_problem_path(id: problem.id), class: 'text-dark mx-2 icon-comment' do 
           fa_icon 'edit'
         end}" <<
         "#{link_to edit_problem_path(id: problem.id), class: 'text-dark mx-2 icon-comment' do 
