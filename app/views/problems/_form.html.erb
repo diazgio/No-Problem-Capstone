@@ -1,6 +1,6 @@
 <%= form_with(model: @problem, local: true, html: {class: 'form-p'}) do |form| %>
   <div class="p-3 mr-3 trix">
-    <div class='d-flex align-items-center'>
+    <div class='d-flex align-items-center title-fp'>
       <h3 class='mr-3 mb-3'>Category: </h3>
       <%= form.select :category_id, Category.all.map { |c| [c.category, c.id]} %>
     </div>
@@ -9,6 +9,6 @@
     </div>
 
     <%= hidden_field_tag(:redirect_url, root_path) %>
-    <%= form.button :submit, class: "btn comment mt-2" %>
+    <%= form.button :submit, class: "btn comment mt-3" %>
   </div>
 <% end %>

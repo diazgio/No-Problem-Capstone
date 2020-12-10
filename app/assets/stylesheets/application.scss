@@ -460,9 +460,6 @@ body {
   }
 }
 
-#cont-users {
-  
-}
 
 .allusers-cont {
   height: 100vh;
@@ -513,5 +510,37 @@ body {
           font-size: 1.5rem;
         }
     }
+  }
+}
+
+.editing-p {
+  height: 32rem;
+  h1 {
+    font-weight: bolder;
+    text-align: center;
+  }
+  .form-p {
+    .trix {
+      .title-fp {
+        h3 {
+          font-weight: bolder;
+        }
+      }
+      .text-area {
+        #trix-toolbar-1 {
+          font-size: 1.7rem;
+          .trix-button-row {
+            .trix-button-group:nth-child(2) {
+              display: none;
+              background-color: white;
+            }
+          }
+        }
+      }
+    }
+  }
+  a {
+    font-size: 1.5rem;
+    font-weight: bolder;
   }
 }

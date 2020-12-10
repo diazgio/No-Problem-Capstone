@@ -6,12 +6,14 @@
     <div class='col-10 p-0 m-0'>
       <%= flash_message %>
       <%= render 'problems/navbar' %>
+      <div class='col-7 container mt-5 shadow-lg p-3 mb-5 bg-white rounded editing-p'>
+        <h1>Editing Problem</h1>
+
+        <%= render 'form', problem: @problem %>
+        <div class='text-center'> 
+          <%= link_to 'Back', problems_path, class:'btn bg-left text-light ml-3' %>
+        </div>
+      </div>
     </div>
   </div>
 </section>
-<h1>Editing Problem</h1>
-
-<%= render 'form', problem: @problem %>
-
-<%= link_to 'Show', @problem %> |
-<%= link_to 'Back', problems_path %>
