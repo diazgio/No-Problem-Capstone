@@ -12,8 +12,12 @@ SimpleForm.setup do |config|
   # wrapper, change the order or even add your own to the
   # stack. The options given below are used to wrap the
   # whole input.
+  # rubocop: disable Layout/LineLength
   config.wrappers :default, class: :input,
                             hint_class: :field_with_hint, error_class: :field_with_errors, valid_class: :field_without_errors do |b|
+
+                            end
+  # rubocop: enable Layout/LineLength                         
     ## Extensions enabled by default
     # Any of these extensions can be disabled for a
     # given input by passing: `f.input EXTENSION_NAME => false`.
@@ -53,7 +57,7 @@ SimpleForm.setup do |config|
     ## Inputs
     # b.use :input, class: 'input', error_class: 'is-invalid', valid_class: 'is-valid'
     b.use :label_input
-    b.use :hint,  wrap_with: { tag: :span, class: :hint }
+    b.use :hint, wrap_with: { tag: :span, class: :hint }
     b.use :error, wrap_with: { tag: :span, class: :error }
 
     ## full_messages_for
