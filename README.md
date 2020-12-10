@@ -2,13 +2,19 @@
 
 # 🧐 No problem! Ruby on Rails Capstone
 
-## Concept
+## :scroll: Concept
 
 > A Social networking sites build it with RoR allows you to create a user account to post problems related to different categories, create new categories, follow and be followed by other users, upload photos and edit the texts you post.
 
 > View with your user sign in
 
 ![screenshot](./app/assets/images/index.png)
+
+## :octocat: Usage
+
+- This project intends to practice my skills building a full working MVP;
+- Prepare data architecture documentation;
+- Work with deployment to Heroku.<br>
 
 ## 🎥 PRESENTATION VIDEO
 [Link Presentation Video](https://www.loom.com/share/d6f7cc361f0a438abf417cec1471465f)
@@ -19,11 +25,22 @@
 
 ## 🛠 Built With
 
-- Ruby on Rails
+- Ruby on Railss
+- Heroku
 - Postgresql
-- Linters
-- Devise
-- Action Storage
+
+### :gem: Gems and tools
+
+- Action Text and Trix: Style forms and rich text editors
+- Action Storage: Attach images
+- Bootstrap: Styles
+- Devise: manage users
+- Faker: Seed fake users and diferent models that you have
+- Font-awesome: Include icons in methods
+- Hirb: Style tables in console to visualize them better
+- Linters: Rubocop
+- Simple_form: Improve the way to setup forms
+- Rspec-rails: test all content in your rails app
 
 
 ## 🔧 Getting Started
@@ -49,6 +66,7 @@
  - Run the program with this code :
         ```
         bundle install
+        yarn install --check-files
         ```       
 - Run the program with this code :
         ```
@@ -68,17 +86,13 @@
 
 - Enjoy the app.
 
-### Usage
-
-- Personal Project - Create a basic social media app just with learning purpose
-
 ## 👤 Authors
 
 👤 **Giordano Díaz**
 
 - Github: [@diazgio](https://github.com/diazgio)
 - Twitter: [@giordano_diaz](https://twitter.com/giordano_diaz)
-- LinkenIn:[LinkenIn](www.linkedin.com/in/Giordano-Diaz)
+- LinkenIn:[giordano-diaz](www.linkedin.com/in/Giordano-Diaz)
 
 ## 🤝 Contributing
 
@@ -86,15 +100,14 @@ Contributions, issues and feature requests are welcome!
 
 Feel free to check the [issues page](issues/).
 
-## Show your support
+## :pray: Show your support
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
+## :point_right: Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- This app is inspirate in the design of Gregoire Vella on Behance
+- You can find the original project here: [link](https://www.behance.net/gallery/14286087/Twitter-Redesign-of-UI-details)
 
 ## 📝 License
 

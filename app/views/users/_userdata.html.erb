@@ -1,17 +1,17 @@
-<div class='container shadow-lg p-3 mb-5 bg-white rounded'>
+<div class='container shadow-lg p-3 mb-4 bg-white rounded'>
   <div class="col-12 align-content-center pt-4">
     <div style="text-align: center">
       <%= user_avatar(@user) %>
     </div>
   </div>
 
-  <div class=" justify-content-center user-data" style=" text-align: center">
+  <div class=" justify-content-center user-data px-0" style=" text-align: center">
     
     <h5 class="card-title u-title mt-3"><%= @user.name %></h5>
     <p class="card-text"><small class="text-muted"><%= "@#{@user.username}" %></small></p>
     <p class='follow-button'><%= follow_unfollow(@user)%></p>
 
-    <div class='d-flex row justify-content-center user-follows mb-5'>
+    <div class='d-flex row justify-content-center user-follows mb-5 mx-0'>
       
       <div class='mr-5'>
         <h3><%= @user.problems.count.to_s%></h3>
@@ -32,16 +32,22 @@
 
     
     <div class="media-body">
-      <div class="row justify-content-center media-2">
+      <div class="row media-2">
         <h3>Following To</h3>
       </div>
       <hr/>
     </div>
     
     <% @user.follows.each do |person| %>
-      <div class="col-12 users-followeds">
-        <%= user_avatar(person) %>
-        <%= link_to person.name, user_path(person.id)  %>
+      <div class="col-11 users-followeds">
+        <div class='row d-flex'>
+          <div class='col-4 mr-3'>
+            <%= user_avatar(person) %>
+          </div>
+          <div class='col-7 d-flex justify-content-center align-items-center'>
+            <%= link_to person.name, user_path(person.id)  %>
+          </div>
+        </div>
       </div>
       <hr>
     <% end %>

@@ -8,7 +8,7 @@ class CategoriesController < ApplicationController
     @categories = Category.all
     cate = params[:cate]
     @problems = if !cate.nil?
-                  Problem.where(category_id: cate)
+                  Problem.where(category_id: cate).order('created_at DESC').includes(:user)
                 else
                   Problem.all
                 end

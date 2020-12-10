@@ -10,10 +10,10 @@ module ApplicationHelper
   def signed_in?
     if user_signed_in?
       "#{link_to 'New Problem', new_problem_path, class: 'btn btn-light my-2 my-sm-0 logs'}" \
-        "#{link_to 'Edit', edit_user_registration_path, class: 'btn text-light m-2 logs'}" \
+        "#{link_to 'Edit Profile', edit_user_registration_path, class: 'btn text-light m-2 logs'}" \
        "#{link_to 'Logout', destroy_user_session_path, method: :delete, class: 'btn text-light m-2 logs'}".html_safe
     else
-      "#{link_to 'Sing In', new_user_session_path, class: 'btn text-light m-2 logs'}" \
+      "#{link_to 'Sign In', new_user_session_path, class: 'btn text-light m-2 logs'}" \
        "#{link_to 'Sing Up', new_user_registration_path, class: 'btn text-light m-2 logs'}".html_safe
     end
   end

@@ -5,13 +5,13 @@ class ProblemsController < ApplicationController
   # GET /problems
   # GET /problems.json
   def index
-    @problems = Problem.all.order('created_at DESC')
+    @problems = Problem.all.order('created_at DESC').includes(:user)
     @problem = Problem.new
+    @users_first_three = User.order("created_at DESC").first(3)
   end
 
   # GET /problems/1
   # GET /problems/1.json
-  def show; end
 
   # GET /problems/new
   def new
@@ -19,7 +19,6 @@ class ProblemsController < ApplicationController
   end
 
   # GET /problems/1/edit
-  def edit; end
 
   # POST /problems
   # POST /problems.json
@@ -70,6 +69,6 @@ class ProblemsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def problem_params
-    params.require(:problem).permit(:content, :user_id, :body, :category_id)
+    params.require(:problem).permit(:user, :content, :user_id, :body, :category_id)
   end
 end
