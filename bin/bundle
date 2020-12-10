@@ -10,7 +10,7 @@ require 'rubygems'
 
 m = Module.new do
   # rubocop: disable Metrics/CyclomaticComplexity, Metrics/PerceivedComplexity, Layout/LineLength
- 
+
   module_function
 
   def invoked_as_script?
