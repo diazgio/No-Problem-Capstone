@@ -477,3 +477,36 @@ body {
     }
   }
 }
+
+.myfeed-c {
+  height: 30rem;
+  overflow-y: auto;
+  .problems {
+    .problems-content {
+        strong {
+          font-size: 1.7rem;
+        }
+        small {
+          font-size: 1.5rem;
+          color: #b5b9b5;
+        }
+        .like {
+          font-size: 2rem;
+        }
+        h5 {
+          font-size: 1.7rem;
+          color: #529ff7;
+          text-align: end;
+          font-weight: bolder;
+        }
+
+        .trix-content {
+          font-size: 1.7rem;
+        }
+        
+        .editors {
+          font-size: 1.5rem;
+        }
+    }
+  }
+}
