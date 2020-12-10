@@ -1,5 +1,5 @@
 module UsersHelper
-  # rubocop: disable Style/GuardClause, Layout/LineLength, Style/RedundantParentheses, Lint/ParenthesesAsGroupedExpression
+  # rubocop: disable Style/GuardClause
   def follow_unfollow(user)
     cntnt = link_to 'Unfollow', following_path, method: :delete, class: 'btn bg-navbar text-light'
     return cntnt if current_user.follows.include?(user)
@@ -61,5 +61,5 @@ module UsersHelper
          end}".html_safe
     end
   end
-  # rubocop: enable Style/GuardClause, Layout/LineLength, Style/RedundantParentheses, Lint/ParenthesesAsGroupedExpression
+  # rubocop: enable Style/GuardClause
 end

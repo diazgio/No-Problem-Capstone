@@ -10,8 +10,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+# rubocop: disable Metrics/BlockLength
 ActiveRecord::Schema.define(version: 20_201_207_151_617) do
-  # rubocop: disable Metrics/BlockLength, Layout/LineLength
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
@@ -107,5 +107,5 @@ ActiveRecord::Schema.define(version: 20_201_207_151_617) do
   add_foreign_key 'active_storage_attachments', 'active_storage_blobs', column: 'blob_id'
   add_foreign_key 'followings', 'users', column: 'followed_id'
   add_foreign_key 'followings', 'users', column: 'follower_id'
-  # rubocop: enable Metrics/BlockLength, Layout/LineLength
 end
+# rubocop: enable Metrics/BlockLength

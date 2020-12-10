@@ -12,8 +12,8 @@
 
 # Use this setup block to configure all options available in SimpleForm.
 
+# rubocop: disable Metrics/BlockLength, Layout/LineLength
 SimpleForm.setup do |config|
-  # rubocop: disable Metrics/BlockLength, Layout/LineLength
   # Default class for buttons
   config.button_class = 'btn'
 
@@ -430,5 +430,5 @@ SimpleForm.setup do |config|
   #   range:         :custom_range,
   #   time:          :custom_multi_select
   # }
-  # rubocop: enable Metrics/BlockLength, Layout/LineLength
 end
+# rubocop: enable Metrics/BlockLength, Layout/LineLength
