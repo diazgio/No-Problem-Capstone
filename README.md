@@ -11,7 +11,7 @@
 ![screenshot](./app/assets/images/index.png)
 
 ## 🎥 PRESENTATION VIDEO
-[Link Presentation Video](https://www.loom.com/share/fb093509412d41cfbafa6bb21f532b47)
+[Link Presentation Video](https://www.loom.com/share/d6f7cc361f0a438abf417cec1471465f)
 
 ## 🔴 Live Demo
 
