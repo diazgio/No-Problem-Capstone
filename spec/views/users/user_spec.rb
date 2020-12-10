@@ -5,7 +5,6 @@ RSpec.describe 'Users' do
     @user1 = User.create(name: 'adam', email: 'test1@test.com', password: '123456', id: '1')
     @user2 = User.create(name: 'john', email: 'test2@test.com', password: '123456', id: '2')
     @user3 = User.create(name: 'mike', email: 'test3@test.com', password: '123456', id: '3')
-
   end
   feature 'User can' do
     scenario 'user can login and logout' do

@@ -11,8 +11,7 @@ class ProblemsController < ApplicationController
 
   # GET /problems/1
   # GET /problems/1.json
-  def show
-  end
+  def show; end
 
   # GET /problems/new
   def new
@@ -20,8 +19,7 @@ class ProblemsController < ApplicationController
   end
 
   # GET /problems/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /problems
   # POST /problems.json
@@ -64,13 +62,14 @@ class ProblemsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_problem
-      @problem = Problem.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def problem_params
-      params.require(:problem).permit(:content, :user_id, :body, :category_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_problem
+    @problem = Problem.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def problem_params
+    params.require(:problem).permit(:content, :user_id, :body, :category_id)
+  end
 end

@@ -13,6 +13,7 @@ class ApplicationController < ActionController::Base
                :current_password, :avatar, :cover_image)
     end
   end
+
   def after_sign_in_path_for(_resource)
     problems_path
   end

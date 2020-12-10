@@ -14,9 +14,9 @@
                password_confirmation: 'password')
 end
 
-Following.create(follower_id: 1, followed_id:10)
-Following.create(follower_id: 4, followed_id:3)
-Following.create(follower_id: 2, followed_id:7)
-Following.create(follower_id: 6, followed_id:4)
+Following.create(follower_id: 1, followed_id: 10)
+Following.create(follower_id: 4, followed_id: 3)
+Following.create(follower_id: 2, followed_id: 7)
+Following.create(follower_id: 6, followed_id: 4)
 
 Category.create(category: 'Ruby on Rails')
