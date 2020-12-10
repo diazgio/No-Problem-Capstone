@@ -68,7 +68,7 @@ body {
 }
 
 .home-menu {
-  height: 100vh;
+  height: 100%;
   .user-profile {
     .user-photo {
       margin: 1rem 1rem;
@@ -203,51 +203,57 @@ body {
   height: 13rem;
   width: 13rem;
 }
-
-.problems {
-  height: 27rem;
-  .problems-content {
-    strong {
-      font-size: 2.5rem;
-      color: #1c3e4a;
-    }
-    small {
-      font-size: 1.9rem;
-      color: #b5b9b5;
-    }
-    .like {
-      font-size: 2.5rem;
-      .like-button {
-        color:#529ff7;
+.cont-problems {
+  height: 54rem;
+  overflow-y: auto;
+  .problems {
+    height: 27rem;
+    .problems-content {
+      strong {
+        font-size: 2.5rem;
+        color: #1c3e4a;
+      }
+      small {
+        font-size: 1.9rem;
+        color: #b5b9b5;
+      }
+      .like {
+        font-size: 2.5rem;
+        .like-button {
+          color:#529ff7;
+        }
+      }
+      h5 {
+        text-align: end;
+        font-size: 2.2rem;
+        color: #529ff7;
+        font-weight: bolder;
+      }
+      .trix-content {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      .comment {
+        font-size: 1.5rem;
+        background-color: #529ff7;
+        color: white;
+      }
+      .icon-comment {
+        font-size: 1.5rem;
+        margin-top: 1.3rem;
       }
     }
-    h5 {
-      text-align: end;
-      font-size: 2.2rem;
-      color: #529ff7;
-      font-weight: bolder;
-    }
-    .trix-content {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-    .comment {
-      font-size: 1.5rem;
-      background-color: #529ff7;
-      color: white;
-    }
-    .icon-comment {
-      font-size: 1.5rem;
-      margin-top: 1.3rem;
-    }
   }
+
 }
 .comment {
   font-size: 1.5rem;
   background-color: #529ff7;
   color: white;
 }
-
+.trending {
+  height: 75rem;
+}
 .back {
   background-color: #1c3e4a;
   color: white;
@@ -449,17 +455,25 @@ body {
   }
 }
 
-.all-users {
-  img {
-    margin-left: 4rem;
-    margin-right: 3rem;
-  }
-  a {
-    color: #1c3e4a;
-    font-size: 2rem;
-    font-weight: bolder;
-  }
-  a:hover {
-    text-decoration: none;
+#cont-users {
+  
+}
+
+.allusers-cont {
+  height: 100vh;
+  overflow-y: auto;
+  .all-users {
+    img {
+      margin-left: 4rem;
+      margin-right: 3rem;
+    }
+    a {
+      color: #1c3e4a;
+      font-size: 2rem;
+      font-weight: bolder;
+    }
+    a:hover {
+      text-decoration: none;
+    }
   }
 }

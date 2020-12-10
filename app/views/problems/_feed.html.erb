@@ -1,35 +1,37 @@
 <div class="container d-flex justify-content-center border mt-2 mb-4 mx-0 rounded row align-middle shadow problems-form">
   <%= render 'form' %>
 </div>
-<% @problems.each do |problem| %>
-  <div class="container border py-4 my-2 mx-auto d-flex col-8 problems">
-    
-    <div class="col-4 userimg d-flex justify-content-center align-items-center">
-      <%= user_avatar(problem.user) %>
-    </div>
-
-    <div class="col-8 problems-content">
-      <div class='d-flex justify-content-between align-items-center'>
-        <div>
-          <strong><%= problem.user.name %></strong><br/>
-          <small>@<%= problem.user.username %></small><br/>
-        </div>
-        <div class='like'>
-          <%= like_or_dislike_btn(problem) %>
-        </div>
-      </div>
-      <h5><%= problem.category.category%></h5>
-      <%= problem.body %>
-
-      <%= render partial: 'comments/comment', collection: problem.comments %>
-      <%= form_for(problem.comments.new, url: problem_comments_path(problem)) do |form| %>
-        <%= form.text_field :content, id: :comment_content, class: 'form-control', placeholder: 'Add new Comment' %>
-        <%= form.submit 'Comment', class: 'btn mt-2 comment' %>
-      <% end %>
-      <div class='d-flex justify-content-end'>
-        <%= comment_settings(problem) %>
+<div class='cont-problems'>
+  <% @problems.each do |problem| %>
+    <div class="container border py-4 my-5 mx-auto d-flex col-8 problems">
+      
+      <div class="col-4 userimg d-flex justify-content-center align-items-center">
+        <%= user_avatar(problem.user) %>
       </div>
 
+      <div class="col-8 problems-content">
+        <div class='d-flex justify-content-between align-items-center'>
+          <div>
+            <strong><%= problem.user.name %></strong><br/>
+            <small>@<%= problem.user.username %></small><br/>
+          </div>
+          <div class='like'>
+            <%= like_or_dislike_btn(problem) %>
+          </div>
+        </div>
+        <h5><%= problem.category.category%></h5>
+        <%= problem.body %>
+
+        <%= render partial: 'comments/comment', collection: problem.comments %>
+        <%= form_for(problem.comments.new, url: problem_comments_path(problem)) do |form| %>
+          <%= form.text_field :content, id: :comment_content, class: 'form-control', placeholder: 'Add new Comment' %>
+          <%= form.submit 'Comment', class: 'btn mt-2 comment' %>
+        <% end %>
+        <div class='d-flex justify-content-end'>
+          <%= comment_settings(problem) %>
+        </div>
+
+      </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+</div>
