@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
-  resources :categories
+  resources :categories, only: %i[index create new]
   devise_for :users
   root 'problems#index'
 
-  resources :users
+  resources :users, only: %i[show index]
   resources :followings, only: %i[destroy]
 
   get 'following/:id', to: 'followings#create', as: 'follow'

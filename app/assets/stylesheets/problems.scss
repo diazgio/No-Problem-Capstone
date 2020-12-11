@@ -67,6 +67,16 @@
         font-size: 2rem;
         margin-bottom: 1rem;
       }
+      .post-comments {
+        display: flex;
+        justify-content: space-between;
+        p {
+          font-size: 1.4rem;
+        }
+        span {
+          font-size: 1.1rem;
+        }
+      }
       .form-control {
         margin-bottom: 1rem;
         font-size: 1.5rem;
