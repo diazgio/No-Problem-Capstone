@@ -14,6 +14,20 @@ class User < ApplicationRecord
   has_rich_text :body
   has_one_attached :cover_image
   has_one_attached :avatar
+  scope :user_and_following, ->(ids) { where(id: ids) }
+  scope :user_who_follow, ->(ids) { where.not(id: ids) }
+
+  def followeds_problems
+    ids = follows.select(:id).ids
+    ids << id
+    Problem.ordered_problem.user_filter_problem(User.user_and_following(ids))
+  end
+
+  def who_follow
+    ids = follows.select(:id).ids
+    ids << id
+    User.ordered_users.user_who_follow(ids)
+  end
 
   def unfollow(user)
     follows.destroy(user)

@@ -5,7 +5,7 @@ class ProblemsController < ApplicationController
   # GET /problems
   # GET /problems.json
   def index
-    @problems = Problem.all.order('created_at DESC').includes(:user)
+    @problems = current_user.followeds_problems
     @problem = Problem.new
     @users_first_three = User.order("created_at DESC").first(3)
   end

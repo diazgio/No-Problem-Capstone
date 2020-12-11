@@ -5,7 +5,8 @@ class Problem < ApplicationRecord
   belongs_to :user
   belongs_to :category
   has_rich_text :body
-  scope :ordered_by_most_recent, -> { order(created_at: :desc) }
+  scope :ordered_problem, -> { order(created_at: :desc).includes(:user) }
+  scope :user_filter_problem, ->(user) { where(user: user) }
   has_many :comments, dependent: :destroy
   has_many :likes, dependent: :destroy
 end
