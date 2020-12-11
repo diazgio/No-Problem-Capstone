@@ -39,5 +39,5 @@ RSpec.describe 'Users' do
       click_on 'Unfollow'
       expect(page).to have_content('Unfollow @MikemY')
     end
-  end 
+  end
 end
