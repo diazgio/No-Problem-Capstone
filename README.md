@@ -17,11 +17,11 @@
 - Work with deployment to Heroku.<br>
 
 ## 🎥 PRESENTATION VIDEO
-[Link Presentation Video](https://www.loom.com/share/d6f7cc361f0a438abf417cec1471465f)
+[Link Presentation Video](https://www.loom.com/share/9fbf6a6dc5a145c181789db1e82996f9)
 
 ## 🔴 Live Demo
 
-[Live Demo Link](https://glacial-shelf-86066.herokuapp.com/)
+[Live Demo Link](https://guarded-mesa-08722.herokuapp.com/)
 
 ## 🛠 Built With
 

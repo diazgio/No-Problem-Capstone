@@ -56,7 +56,7 @@ module UsersHelper
       "#{link_to edit_problem_path(id: problem.id), class: 'text-dark mx-2 icon-comment' do
            fa_icon 'edit'
          end}" \
-      "#{link_to edit_problem_path(id: problem.id), class: 'text-dark mx-2 icon-comment' do
+      "#{link_to problem, method: :delete, data: { confirm: 'Are you sure you want to delete this tweet?' }, class: 'text-dark mx-2 icon-comment' do
            fa_icon 'trash-alt'
          end}".html_safe
     end

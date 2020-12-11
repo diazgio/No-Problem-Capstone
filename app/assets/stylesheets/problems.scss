@@ -136,8 +136,13 @@
     .trix {
       .title-fp {
         h3 {
+          font-size: 1.7rem;
           font-weight: bolder;
         }
+      }
+      select {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
       }
       .text-area {
         #trix-toolbar-1 {
@@ -149,6 +154,10 @@
             }
           }
         }
+      }
+      trix-editor {
+        height: 10rem;
+        font-size: 1.7rem;
       }
     }
   }
