@@ -17,9 +17,15 @@ class FollowingsController < ApplicationController
   # DELETE /followings/1
   # DELETE /followings/1.json
   def destroy
-    current_user.unfollow(@user)
-    flash[:notice] = "Unfollow #{@user.username}"
-    redirect_to request.referer
+    @user = User.find(params[:id])
+    if @user
+      current_user.unfollow(@user)
+      flash[:notice] = "Unfollow #{@user.username}"
+      redirect_to request.referer
+    else
+      flash[:notice] = "Something happens please try again"
+      redirect_to request.referer
+    end
   end
 
   private

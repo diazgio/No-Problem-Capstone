@@ -53,10 +53,16 @@ class ProblemsController < ApplicationController
   # DELETE /problems/1
   # DELETE /problems/1.json
   def destroy
-    @problem.destroy
-    respond_to do |format|
-      format.html { redirect_to problems_url, notice: 'Problem was successfully destroyed.' }
-      format.json { head :no_content }
+    @problem = Problem.find(params[:id])
+    if @problem
+      @problem.destroy
+      respond_to do |format|
+        format.html { redirect_to problems_url, notice: 'Problem was successfully destroyed.' }
+        format.json { head :no_content }
+      end
+    else
+      format.html { render @problem }
+      format.json { render json: @problem.errors, status: :unprocessable_entity }
     end
   end
 
