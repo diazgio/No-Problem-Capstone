@@ -1,0 +1,227 @@
+@import "bootstrap";
+@import '@fortawesome/fontawesome-free/scss/fontawesome';
+@import '@fortawesome/fontawesome-free/scss/solid';
+@import '@fortawesome/fontawesome-free/scss/regular';
+@import '@fortawesome/fontawesome-free/scss/brands';
+@import '@fortawesome/fontawesome-free/scss/v4-shims';
+@import 'users';
+@import 'problems';
+@import 'categories';
+
+html,
+body {
+  font-size: 62.5%; /* 10px -> 1rem */
+  margin: 0;
+}
+.flash {
+  font-size: 1.7rem;
+}
+.bg-left {
+  background-color: #1c3e4a;
+}
+
+.bg-navbar {
+  background-color: #529ff7;
+}
+
+.logo-navbar {
+  font-size: 2rem;
+}
+
+.logs {
+  font-size: 1.7rem;
+  font-weight: bolder;
+}
+
+.sign-up {
+  h2 {
+    font-size: 3rem;
+    font-weight: bolder;
+    color:  #1c3e4a;
+    text-align: center;
+    border-bottom: 1px solid  #1c3e4a;
+    width: fit-content;
+    margin: 1rem auto;
+    padding-bottom: 1rem;
+  }
+  label {
+    font-size: 2rem;
+    font-weight: bolder;
+  }
+  #user_cover_image,
+  #user_avatar {
+    font-size: 1rem;
+    margin: 0 1rem;
+  }
+  small {
+    font-size: 1.2rem;
+  }
+  .form-actions {
+    text-align: center;
+    margin: 1rem 0;
+    input {
+      font-size: 1.6rem;
+      font-weight: bolder;
+    }
+  }
+  .links-log {
+    text-align: center;
+    margin-top: 1rem;
+    a {
+      font-size: 1.6rem;
+    }
+  }
+}
+
+.home-menu {
+  height: 100%;
+  .user-profile {
+    .user-photo {
+      margin: 1rem 1rem;
+    }
+  }
+  .followings {
+    border-bottom: white solid 2px;
+    border-top:  white solid 2px;
+    padding: 1rem 0;
+  }
+  .home-page {
+    border-bottom: white solid 1px;
+    
+    padding: 1rem 0;
+    .h-items {
+      margin-left: 9rem;
+      span {
+        font-size: 1.5rem;
+        margin-right: 5px;
+      }
+      h3 {
+        font-weight: 900;
+      }
+    }
+    .h-items:hover {
+      text-decoration: none;
+    }
+  }
+  .home-page:hover {
+    background-color: #529ff7;
+  }
+}
+
+.left-side {
+  height: 100vh;
+}
+
+.register {
+  margin-top: 17rem;
+  .title-log {
+    h2,h5 {
+      color: #1c3e4a;
+      font-weight: bolder;
+    }
+    h2 {
+      font-size: 3rem;
+    }
+    h5 {
+      font-size: 2rem;
+    }
+  }
+  .image-login {
+    height: 50rem;
+    border-radius: 20%;
+  }
+  .login-form {
+    height: 40rem;
+    border: 1px solid black;
+    border-radius: 2rem;
+    .formate {
+      height: 30rem;
+      margin-top: 2rem;
+      width: 40rem;
+      h2 {
+        font-size: 3rem;
+        font-weight: 900;
+      }
+      .email {
+        font-size: 1.7rem;
+        width: 30rem;
+      }
+      .pass {
+        font-size: 1.7rem;
+        width: 30rem;
+      }
+      .rememberme{
+        font-size: 1.7rem;
+        .form-check {
+          display: flex;
+          input {
+            margin-left: 5rem;
+            margin-top: 0.6rem;
+          }
+          label {
+            margin-left: 7rem;
+          }
+        }
+      }
+      .button {
+        margin-bottom: 1rem;
+        .login-button {
+          font-size: 1.7rem;
+        }
+      }
+      a {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+.avatar {
+  height: 13rem;
+  width: 13rem;
+}
+
+.back {
+  background-color: #1c3e4a;
+  color: white;
+  font-size: 2rem;
+}
+
+.edit {
+  height: auto;
+  .title-edit {
+    color: #529ff7;
+    font-weight: 900;
+    font-size: 3rem;
+  }
+  label {
+    font-size: 1.5rem;
+  }
+  input {
+    font-size: 1.3rem;
+  }
+  small {
+    font-size: 1.2rem;
+  }
+  .update {
+    background-color: #529ff7;
+    color: white;
+    font-weight: bolder;
+    font-size: 1.8rem;
+  }
+  h3 {
+    font-size: 1.8rem;
+  }
+  p {
+    font-size: 1.5rem;
+  }
+  .label-pics {
+    font-weight: bolder;
+    color: #529ff7;
+  }
+}
+
+.alert,
+.invalid-feedback {
+  font-size: 1.2rem;
+}

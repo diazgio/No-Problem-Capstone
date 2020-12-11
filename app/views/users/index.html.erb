@@ -1,0 +1,28 @@
+<section class='containerfluid p-0 m-0' id='cont-users'>
+  <div class='row m-0'>
+    <div class='col-2 left-side bg-secondary p-0 m-0'>
+      <%= render 'problems/left-side' %>
+    </div>
+    <div class='col-10 p-0 m-0'>
+      <%= flash_message %>
+      <%= render 'problems/navbar' %>
+
+      <div class='allusers-cont' >
+        <% @users.each do |p| %>
+          <div class="container col-5 mt-5 shadow-lg p-3 mb-5 bg-white rounded all-users">
+            <div class='row'>
+              <div class='col-4'>
+                <%= user_avatar(p) %>
+              </div>
+              <div class='col-8 d-flex align-items-center justify-content-center users-names'>
+                <%=link_to p.fullname, user_path(id: p.id) %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+
+    </div>
+  </div>
+</section>
+

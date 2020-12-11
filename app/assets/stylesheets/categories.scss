@@ -1,0 +1,88 @@
+// Place all the styles related to the Categories controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.new-cate {
+  h1 {
+    font-size: 3.5rem;
+    font-weight: bolder;
+    color:  #1c3e4a;
+    border-bottom: 1px solid #1c3e4a;
+    width: fit-content;
+    margin: 2rem auto;
+  }
+  label {
+    font-size: 2rem;
+    font-weight: bolder;
+    color: #529ff7;
+  }
+  .create {
+    font-size: 1.7rem;
+    font-weight: bolder;
+  }
+  a {
+    font-size: 1.5rem;
+  }
+}
+
+.index-cate {
+  height: 80rem;
+  .title-c {
+    width: fit-content;
+    padding: 1rem;
+    h1 {
+      color: #1c3e4a;
+      font-weight: bolder;
+    }
+  }
+  
+  .new-c {
+    font-size: 1.7rem;
+    font-weight: bolder;
+  }
+  
+  .categories {
+    .each-c {
+      font-size: 1.6rem;
+      font-weight: bolder;
+    }
+  }
+  .container-all-cat {
+    overflow-y: auto;
+    .problems-c {
+      height: 25rem;
+      width: 62rem;
+      .problems-c-content {
+        strong {
+          font-size: 1.5rem;
+        }
+        small {
+          font-size: 1.4rem;
+          color: #b5b9b5;
+        }
+    
+        .like-c {
+          font-size: 2rem;
+        }
+        h5 {
+          color: #529ff7;
+          font-size: 1.3rem;
+          font-weight: bolder;
+        }
+        .trix-content {
+          font-size: 1.9rem;
+          margin: 1rem;
+        }
+        .form-control {
+          margin-bottom: 1rem;
+          font-size: 1.5rem;
+        }
+        .icon-comment {
+          font-size: 1.5rem;
+          color:  #1c3e4a;
+        }
+      }
+    }
+  }
+
+}

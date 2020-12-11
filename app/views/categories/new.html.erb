@@ -1,0 +1,18 @@
+<section class='container-fluid p-0 m-0'>
+  <div class='row m-0'>
+    <div class='col-2 left-side bg-secondary p-0 m-0'>
+      <%= render 'problems/left-side' %>
+    </div>
+    <div class='col-10 p-0 m-0'>
+      <%= flash_message %>
+      <%= render 'problems/navbar' %>
+      <div class="col-5 container shadow-lg p-3 mb-5 bg-white rounded mt-5 new-cate px-3">
+        <h1>New Category</h1>
+        <%= render 'form', category: @category %>
+        <%= link_to 'Back', categories_path, class: 'btn bg-left text-light' %>
+      </div>
+    </div>
+  </div>
+</section>
+
+

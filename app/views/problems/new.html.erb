@@ -1,0 +1,21 @@
+<section class='container-fluid p-0 m-0'>
+  <div class='row m-0'>
+    <div class='col-2 left-side p-0 m-0'>
+      <%= render 'left-side' %>
+    </div>
+    <div class='col-10 p-0 m-0'>
+      <%= flash_message %>
+      <%= render 'problems/navbar' %>
+      <div class='container mt-5 shadow-lg p-3 mb-5 bg-white rounded new-problem'>
+        <h1>New Problem</h1>
+        <div class='new-form-p'>
+          <%= render 'form', problem: @problem %>
+        </div>
+        <div class='text-center'>
+          <%= link_to 'Back', problems_path, class: 'back btn' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

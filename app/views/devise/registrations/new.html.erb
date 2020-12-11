@@ -1,0 +1,57 @@
+<section class='container-fluid p-0 m-0'>
+  <div class='row m-0'>
+    <div class='col-2 left-side bg-left p-0 m-0'>
+
+    </div>
+    <div class='col-10 p-0 m-0 home-menu'>
+      <%= flash_message %>
+      <%= render 'problems/navbar' %>
+      <div class='col-7 container shadow-lg p-5 mb-5 bg-white rounded mt-5 sign-up'>
+        <h2>Sign up</h2>
+
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+          <%= f.error_notification %>
+
+          <div class="form-inputs">
+            <%= f.input :fullname,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "name" } %>
+
+            <%= f.input :username,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "username" } %>
+
+            <%= f.label :cover_image %>
+            <%= f.file_field :cover_image %>
+
+            <%= f.label :photo %>
+            <%= f.file_field :photo %>
+
+            <%= f.input :email,
+                        required: true,
+                        autofocus: true,
+                        input_html: { autocomplete: "email" }%>
+
+            <%= f.input :password,
+                        required: true,
+                        hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
+                        input_html: { autocomplete: "new-password" } %>
+                        
+            <%= f.input :password_confirmation,
+                        required: true,
+                        input_html: { autocomplete: "new-password" } %>
+          </div>
+
+          <div class="form-actions">
+            <%= f.button :submit, "Sign up", class:'btn bg-navbar text-light' %>
+          </div>
+        <% end %>
+        <div class='links-log'>
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

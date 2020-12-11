@@ -1,0 +1,63 @@
+<section class='container-fluid p-0 m-0'>
+  <div class='row m-0'>
+    <div class='col-2 left-side bg-secondary p-0 m-0'>
+      <%= render 'problems/left-side' %>
+    </div>
+    <div class='col-10 p-0 m-0'>
+      <%= flash_message %>
+      <%= render 'problems/navbar' %>
+      <div class='col-8 mx-auto p-5 d-flex flex-column align-items-center index-cate'>
+        <div class='title-c d-flex justify-content-center align-items-center border-top border-bottom'>
+          <h1>CATEGORIES</h1>
+        </div>
+        <div class='d-flex justify-content-between align-items-center '>
+          <h2 class='mr-4'>¡Create Your Own CATEGORY!: </h2>
+          <h2><%= link_to 'New Category', new_category_path, class: 'btn bg-navbar text-light my-3 new-c' %></h2>
+        </div>
+        
+        <div class='categories d-flex justify-content-around'>
+          <% @categories.each do |category| %>
+            <h3 class='mr-2'><%= link_to category.category, categories_path(:cate => category.id),class: 'btn bg-left text-light each-c' %></h3>
+          <% end %>
+        </div>
+
+        <div class='col-12 container-all-cat d-flex flex-wrap'>
+          <% @problems.each do |problem| %>
+            <div class="container border py-4 my-2 mx-auto d-flex col-8 problems-c">
+              <div class="col-4 userimg d-flex justify-content-center align-items-center">
+                <%= user_avatar(problem.user) %>
+              </div>
+              <div class="col-8 problems-c-content">
+                <div class='d-flex justify-content-between align-items-center'>
+                  <div>
+                    <strong><%= problem.user.fullname %></strong>
+                    <br/>
+                    <br/>
+                    <small>@<%= problem.user.username %></small>
+                    <br/>
+                    <br/>
+                  </div>
+                  <div class='like-c'>
+                    <%= like_or_dislike_btn(problem) %>
+                  </div>
+                </div>
+                  <h5><%= problem.category.category%></h5>
+                  <%= problem.body %>
+                  <%= render partial: 'comments/comment', collection: problem.comments %>
+                  <%= form_for(problem.comments.new, url: problem_comments_path(problem)) do |form| %>
+                    <%= form.text_field :content, id: :comment_content, class: 'form-control', placeholder: 'Add new Comment' %>
+                    <%= form.submit 'Comment', class: 'btn mt-2 comment' %>
+                  <% end %>
+                  <div class='d-flex justify-content-end'>
+                    <%= comment_settings(problem) %>
+                  </div>
+              </div>
+            </div>
+          <% end %>
+        </div>
+        
+      </div> 
+    </div>
+  </div>
+</section>
+

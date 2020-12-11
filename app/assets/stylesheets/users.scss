@@ -1,0 +1,157 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.user-info {
+  height: 90rem;
+  .user-interac {
+    height: inherit;
+  }
+}
+.user-navbar {
+  font-size: 1.8rem;
+  font-weight: bolder;
+  li {
+    a {
+      color: #1c3e4a;
+    }
+  }
+}
+
+.user-form {
+  .trix {
+    .title-fp {
+      h3 {
+        font-weight: bolder;
+      }
+      select {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+      }
+    }
+    trix-editor {
+      height: 10rem;
+      font-size: 1.7rem;
+    }
+    button {
+      font-size: 1.5rem;
+    }
+    #trix-toolbar-1 {
+      font-size: 1.5rem;
+      .trix-button-row {
+        .trix-button-group:nth-child(2) {
+          display: none;
+          background-color: white;
+        }
+      }
+    }
+  }
+
+  
+}
+.user-data {
+  height: 65rem;
+  overflow-y: auto;
+  .u-title {
+    font-size: 1.7rem;
+    font-weight: bolder;
+    color: #1c3e4a;
+  }
+  small {
+    font-size: 1.5rem;
+  }
+  .follow-button {
+    font-size: 2rem;
+  }
+  .user-follows {
+    width: auto;
+    h3, h4 {
+      color: #529ff7;
+      font-weight: bolder;
+    }  
+  }
+  .media-body {
+    .media-2 {
+      margin: 0 auto;
+      width: 8rem;
+      h3 {
+        color: #1c3e4a;
+        font-weight: bolder;
+      }
+    }
+
+  }
+
+  .users-followeds {
+    margin-right: 0;
+    a {
+      color: #1c3e4a;
+      font-size: 1.7rem;
+      margin: 0 2rem;
+      font-weight: bolder;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+
+.allusers-cont {
+  height: 90rem;
+  overflow-y: auto;
+  .all-users {
+    display: flex;
+    align-items: center;
+    img {
+      margin-left: 4rem;
+      margin-right: 3rem;
+    }
+    .users-names {
+      a {
+        margin-left: 4rem;
+        color: #1c3e4a;
+        font-size: 2rem;
+        font-weight: bolder;
+      }
+      a:hover {
+        text-decoration: none;
+      }
+
+    }
+  }
+}
+
+.myfeed-c {
+  height: 29rem;
+  overflow-y: auto;
+  .problems {
+    .problems-content {
+        strong {
+          font-size: 1.7rem;
+        }
+        small {
+          font-size: 1.5rem;
+          color: #b5b9b5;
+        }
+        .like {
+          font-size: 2rem;
+        }
+        h5 {
+          font-size: 1.7rem;
+          color: #529ff7;
+          text-align: end;
+          font-weight: bolder;
+        }
+
+        .trix-content {
+          font-size: 1.7rem;
+        }
+        
+        .editors {
+          font-size: 1.5rem;
+        }
+    }
+  }
+}
+

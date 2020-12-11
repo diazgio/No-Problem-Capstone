@@ -1,0 +1,72 @@
+<section class='container-fluid p-0 m-0'>
+  <div class='row m-0'>
+    <div class='col-2 left-side p-0 m-0'>
+      <%= render 'problems/left-side' %>
+    </div>
+    <div class='col-10 p-0 m-0'>
+      <%= flash_message %>
+      <%= render 'problems/navbar' %>
+      <div class='container mt-5 shadow-lg p-5 mb-5 bg-white rounded edit'>
+        <h2 class='title-edit'>Edit <%= current_user.fullname.to_s.humanize %></h2>
+
+        <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
+          <%= f.error_notification %>
+
+          <div class="form-inputs edit-name">
+            <%= f.input :fullname, required: true, autofocus: true%>
+            <%= f.input :email, required: true, autofocus: true %>
+          </div>
+
+          <div class='form-group d-flex justify-content-around my-5'>
+            <div class='mr-4 d-flex'>
+              <div class='d-flex flex-column'>
+                <%= f.label :photo, 'User Photo', class: 'label-pics' %>
+                <%= f.file_field :photo %>
+              </div>
+              <div class='ml-2'>
+                <%= edit_avatar %>
+              </div>
+            </div>
+            <div class='d-flex'>
+              <div class='d-flex flex-column'>
+                <%= f.label :cover_image, 'Cover Photo', class: 'label-pics' %>
+                <%= f.file_field :cover_image %>
+              </div>
+              <div class='ml-2'>
+                <%= edit_cover %>
+              </div>
+            </div>
+          </div>
+
+            <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+              <p>Currently waiting confirmation for: <%= resource.unconfirmed_email %></p>
+            <% end %>
+
+            <%= f.input :password,
+                        hint: "leave it blank if you don't want to change it",
+                        required: false,
+                        input_html: { autocomplete: "new-password" } %>
+            <%= f.input :password_confirmation,
+                        required: false,
+                        input_html: { autocomplete: "new-password" } %>
+            <%= f.input :current_password,
+                        hint: "we need your current password to confirm your changes",
+                        required: true,
+                        input_html: { autocomplete: "current-password" } %>
+
+          <div class="form-actions d-flex justify-content-center">
+            <%= f.button :submit, "Update", class:'update btn' %>
+          </div>
+        <% end %>
+
+        <h3 class='mt-5 text-danger'>Cancel my account</h3>
+
+        <p>Unhappy? <%= link_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+        <div class='text-center'>
+          <%= link_to "Back", :back, class: 'back btn' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+

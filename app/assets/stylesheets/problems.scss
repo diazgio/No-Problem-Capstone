@@ -1,0 +1,206 @@
+// Place all the styles related to the Problems controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+
+.problems-form {
+  .form-p {
+    width: 100%;
+    .trix {
+      .title-fp {
+        font-size: 1.7rem;
+        font-weight: bolder;
+      }
+      select {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+      }
+      .text-area {
+        #trix-toolbar-1 {
+          font-size: 1.2rem;
+          .trix-button-row {
+            .trix-button-group:nth-child(2) {
+              display: none;
+              background-color: white;
+            }
+          }
+        }
+      }
+      trix-editor {
+        height: 10rem;
+        font-size: 1.7rem;
+      }
+    }
+  }
+  
+}
+
+
+
+.cont-problems {
+  height: 54rem;
+  overflow-y: auto;
+  .problems {
+    height: auto;
+    .problems-content {
+      strong {
+        font-size: 2.5rem;
+        color: #1c3e4a;
+      }
+      small {
+        font-size: 1.9rem;
+        color: #b5b9b5;
+      }
+      .like {
+        font-size: 2.5rem;
+        .like-button {
+          color:#529ff7;
+        }
+      }
+      h5 {
+        text-align: end;
+        font-size: 2.2rem;
+        color: #529ff7;
+        font-weight: bolder;
+      }
+      .trix-content {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+      .post-comments {
+        display: flex;
+        justify-content: space-between;
+        p {
+          font-size: 1.4rem;
+        }
+        span {
+          font-size: 1.1rem;
+        }
+      }
+      .form-control {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+      }
+      .comment {
+        font-size: 1.5rem;
+        background-color: #529ff7;
+        color: white;
+      }
+      .icon-comment {
+        font-size: 1.5rem;
+        margin-top: 1.3rem;
+      }
+    }
+  }
+
+}
+
+.comment {
+  font-size: 1.5rem;
+  background-color: #529ff7;
+  color: white;
+}
+
+.trending {
+  height: 75rem;
+}
+.whotofollow {
+  .w-title {
+    border-bottom: rgba(190, 186, 186, 0.863) solid 1px;
+    text-align: center;
+    padding: 1rem 0;
+    h3 {
+      font-size: 2.5rem;
+    }
+  }
+  .users-to-f {
+    padding-top: 1rem;
+    a {
+      color: #1c3e4a;
+      font-size: 2rem;
+      margin-left: 1.5rem;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.editing-p {
+  height: 32rem;
+  h1 {
+    font-weight: bolder;
+    text-align: center;
+  }
+  .form-p {
+    .trix {
+      .title-fp {
+        h3 {
+          font-size: 1.7rem;
+          font-weight: bolder;
+        }
+      }
+      select {
+        margin-bottom: 1rem;
+        font-size: 1.5rem;
+      }
+      .text-area {
+        #trix-toolbar-1 {
+          font-size: 1.7rem;
+          .trix-button-row {
+            .trix-button-group:nth-child(2) {
+              display: none;
+              background-color: white;
+            }
+          }
+        }
+      }
+      trix-editor {
+        height: 10rem;
+        font-size: 1.7rem;
+      }
+    }
+  }
+  a {
+    font-size: 1.5rem;
+    font-weight: bolder;
+  }
+}
+
+.new-problem {
+  h1 {
+    font-size: 3rem;
+    font-weight: bolder;
+    text-align: center;
+  }
+  .new-form-p {
+    .form-p {
+      width: 100%;
+      .trix {
+        .title-fp {
+          font-size: 1.7rem;
+          font-weight: bolder;
+        }
+        select {
+          margin-bottom: 1rem;
+          font-size: 1.5rem;
+        }
+        .text-area {
+          #trix-toolbar-1 {
+            font-size: 1.2rem;
+            .trix-button-row {
+              .trix-button-group:nth-child(2) {
+                display: none;
+                background-color: white;
+              }
+            }
+          }
+        }
+        trix-editor {
+          height: 10rem;
+          font-size: 1.7rem;
+        }
+      }
+    }
+  }
+}
