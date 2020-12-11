@@ -3,6 +3,7 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  validates :fullname, presence: :true
   validates :username, uniqueness: true
   has_many :problems, dependent: :destroy
   has_many :followers, class_name: 'Following', foreign_key: 'follower_id', dependent: :destroy

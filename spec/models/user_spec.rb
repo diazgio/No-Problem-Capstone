@@ -10,4 +10,13 @@ RSpec.describe User, type: :model do
     it { should have_many(:followers).class_name('Following') }
     it { should have_many(:followeds).class_name('Following') }
   end
+
+  describe 'validations' do
+    subject { User.create(fullname: 'mikerandome nema', username: '@MikemY', email: 'test3@test.com', password: '123456', id: 3) }
+
+    it { should validate_presence_of(:fullname) }
+    it { should validate_presence_of(:email) }
+    it { should validate_uniqueness_of(:username) }
+  end
+
 end
