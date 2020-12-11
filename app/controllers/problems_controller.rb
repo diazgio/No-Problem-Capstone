@@ -7,7 +7,7 @@ class ProblemsController < ApplicationController
   def index
     @problems = current_user.followeds_problems
     @problem = Problem.new
-    @users_first_three = User.order("created_at DESC").first(3)
+    @users_first_three = current_user.who_follow.last(3)
   end
 
   # GET /problems/1

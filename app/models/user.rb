@@ -14,6 +14,7 @@ class User < ApplicationRecord
   has_rich_text :body
   has_one_attached :cover_image
   has_one_attached :avatar
+  scope :ordered_users, -> { order(created_at: :desc) }
   scope :user_and_following, ->(ids) { where(id: ids) }
   scope :user_who_follow, ->(ids) { where.not(id: ids) }
 

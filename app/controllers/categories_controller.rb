@@ -5,7 +5,7 @@ class CategoriesController < ApplicationController
   # GET /categories
   # GET /categories.json
   def index
-    @categories = Category.all
+    @categories = Category.all.order('created_at DESC')
     cate = params[:cate]
     @problems = if !cate.nil?
                   Problem.where(category_id: cate).order('created_at DESC').includes(:user)
