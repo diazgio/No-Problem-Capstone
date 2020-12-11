@@ -11,8 +11,8 @@ module UsersHelper
   end
 
   def user_avatar(user)
-    if user.avatar.attached?
-      image_tag user.avatar.variant(resize: '90x90!'), class: 'rounded-circle avatar'
+    if user.photo.attached?
+      image_tag user.photo.variant(resize: '90x90!'), class: 'rounded-circle avatar'
     else
       image_tag('avatar.png', class: 'rounded-circle', height: 130, width: 130)
     end
@@ -27,8 +27,8 @@ module UsersHelper
   end
 
   def edit_avatar
-    if resource.avatar.attached?
-      image_tag resource.avatar.variant(resize: '90x90!'), class: 'rounded-circle'
+    if resource.photo.attached?
+      image_tag resource.photo.variant(resize: '90x90!'), class: 'rounded-circle'
     else
       image_tag('avatar.png', class: 'rounded-circle', height: 90, width: 90)
     end
@@ -43,8 +43,8 @@ module UsersHelper
   end
 
   def current_avatar
-    if current_user.avatar.attached?
-      image_tag current_user.avatar.variant(resize: '90x90!'), class: 'rounded-circle'
+    if current_user.photo.attached?
+      image_tag current_user.photo.variant(resize: '90x90!'), class: 'rounded-circle'
     else
       image_tag('avatar.png', class: 'rounded-circle', height: 90, width: 90)
     end
