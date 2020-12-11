@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Users' do
   before :each do
-    @user1 = User.create(fullname: 'adam', username: '@adamNI',email: 'test1@test.com', password: '123456', id: 1)
+    @user1 = User.create(fullname: 'adam', username: '@adamNI', email: 'test1@test.com', password: '123456', id: 1)
     @user2 = User.create(fullname: 'john', username: '@johNy', email: 'test2@test.com', password: '123456', id: 2)
     @user3 = User.create(fullname: 'mike', username: '@MikemY', email: 'test3@test.com', password: '123456', id: 3)
     Following.create(id: 1, follower_id: 1, followed_id: 3)
@@ -37,8 +37,7 @@ RSpec.describe 'Users' do
       click_button 'Log in'
       visit '/users/3'
       click_on 'Unfollow'
-      expect(page).to have_content("Unfollow @MikemY")
+      expect(page).to have_content('Unfollow @MikemY')
     end
-  end
-  
+  end 
 end

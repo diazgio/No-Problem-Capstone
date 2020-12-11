@@ -29,6 +29,10 @@
 - Heroku
 - Postgresql
 
+## :bulb: ERB DIAGRAM
+
+![screenshot](./app/assets/images/Blank-diagram.png)
+
 ### :gem: Gems and tools
 
 - Action Text and Trix: Style forms and rich text editors

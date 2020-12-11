@@ -21,11 +21,10 @@ class FollowingsController < ApplicationController
     if @user
       current_user.unfollow(@user)
       flash[:notice] = "Unfollow #{@user.username}"
-      redirect_to request.referer
     else
-      flash[:notice] = "Something happens please try again"
-      redirect_to request.referer
+      flash[:notice] = 'Something happens please try again'
     end
+    redirect_to request.referer
   end
 
   private

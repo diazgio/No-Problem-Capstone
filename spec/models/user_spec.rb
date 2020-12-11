@@ -1,5 +1,5 @@
 require 'rails_helper'
-
+# rubocop: disable  Layout/LineLength
 RSpec.describe User, type: :model do
   let(:user) { User.new(id: 1) }
 
@@ -18,5 +18,5 @@ RSpec.describe User, type: :model do
     it { should validate_presence_of(:email) }
     it { should validate_uniqueness_of(:username) }
   end
-
 end
+# rubocop: enable Layout/LineLength

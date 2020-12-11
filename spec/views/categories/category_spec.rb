@@ -2,12 +2,10 @@ require 'rails_helper'
 
 RSpec.describe 'Test to verify if the users probems' do
   before :each do
-    @user1 = User.create(fullname: 'adam', username: '@adamNI',email: 'test1@test.com', password: '123456', id: 1)
+    @user1 = User.create(fullname: 'adam', username: '@adamNI', email: 'test1@test.com', password: '123456', id: 1)
     @user2 = User.create(fullname: 'john', username: '@johNy', email: 'test2@test.com', password: '123456', id: 2)
     @user3 = User.create(fullname: 'mike', username: '@MikemY', email: 'test3@test.com', password: '123456', id: 3)
-
     Category.create(id: 1, category: 'Games')
-
   end
   feature 'User can see all Categories' do
     scenario 'sign in and go to Categories index' do
