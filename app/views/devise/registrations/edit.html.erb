@@ -7,13 +7,13 @@
       <%= flash_message %>
       <%= render 'problems/navbar' %>
       <div class='container mt-5 shadow-lg p-5 mb-5 bg-white rounded edit'>
-        <h2 class='title-edit'>Edit <%= current_user.name.to_s.humanize %></h2>
+        <h2 class='title-edit'>Edit <%= current_user.fullname.to_s.humanize %></h2>
 
         <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
           <%= f.error_notification %>
 
           <div class="form-inputs edit-name">
-            <%= f.input :name, required: true, autofocus: true%>
+            <%= f.input :fullname, required: true, autofocus: true%>
             <%= f.input :email, required: true, autofocus: true %>
           </div>
 
