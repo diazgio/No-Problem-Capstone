@@ -22,10 +22,8 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'bootstrap', '~> 4.5', '>= 4.5.3'
-gem 'carrierwave'
 gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'faker', git: 'https://github.com/faker-ruby/faker.git', branch: 'master'
-gem 'fog-aws'
 gem 'font-awesome-rails'
 gem 'hirb'
 gem 'mini_magick'
@@ -33,6 +31,7 @@ gem 'simple_form'
 gem 'trix'
 
 # Use Active Storage variant
+gem 'aws-sdk-s3', require: false
 gem 'image_processing', '~> 1.2'
 
 # Reduces boot times through caching; required in config/boot.rb
